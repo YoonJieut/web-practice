@@ -33,14 +33,14 @@ const slideOut = document.getElementById('slideOut');
 setInterval(()=>{
   let temp = 0;
   const A = setInterval(()=>{
-    console.log("setinterval")
+    // console.log("setinterval")
     if(temp >= -1200){
       slideOut.style.left = temp + "px"; 
       temp = temp-10;
-      console.log(temp);
+      // console.log(temp);
     } else {
       clearInterval(A);
-      console.log('clearInterval')
+      // console.log('clearInterval')
 }
   },0.01)  
   setTimeout(()=>{
@@ -60,4 +60,26 @@ modalBtn.addEventListener('click',()=>{
 });
 first.addEventListener('click',()=>{
   modal.style.display = "flex";
+});
+
+
+// 공지사항 켯다 꺼지는 로직
+// 1.있는 것을 누르면 아무 반응이 일어나지 않는 if문
+// 2. 없는 것을 누르면 head에는 .on body에는 display-flex가 생기는 것
+
+const alertHead = document.getElementById('alertHead');
+const contBody = document.querySelectorAll('.contBody');
+console.log(contBody);
+
+alertHead.addEventListener('click',(e)=>{
+  console.dir(e.target);
+  // if(e.target.classList.contain('on')){
+    
+  // } else {
+  //   e.target.classList.toggle('on');
+  // }
+  alertHead.children[0].classList.toggle('on');
+  alertHead.children[1].classList.toggle('on');
+  contBody[0].classList.toggle('display-flex');
+  contBody[1].classList.toggle('display-flex');
 });

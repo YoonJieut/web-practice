@@ -143,6 +143,18 @@ header {
   position: relative;
 }
 
+/* alert 파트 */
+#alert {
+  position: relative;
+}
+#alertHead {
+  display: flex;
+
+  position: absolute;
+  top:0;
+  left:0;
+}
+
 .contHead {
   height: 40px;
   line-height: 40px;
@@ -154,9 +166,14 @@ header {
   width: 100%;
   outline: 1px solid black;
 
-  display: flex;
+  /* display: flex; */
+  display: none;
   justify-content: center;
   align-items: center;
+
+  position: absolute;
+  top:40px;
+  left: 0;
 }
 
 .contBody ul {
@@ -177,6 +194,13 @@ header {
   font-weight: 700;
   color: #fff;
 }
+.display-flex {
+  display: flex;
+}
+.display-none {
+  display: none;
+}
+
 
 #banner div {
   width: 100px;
@@ -194,6 +218,7 @@ footer {
 
 /* 모달창 */
 #modal {
+  display: none;
   width: 100vw;
   height :100vh;
   background-color: rgba(33, 30, 30, 0.9);
