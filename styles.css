@@ -176,6 +176,7 @@ header {
   left: 0;
 }
 
+/* gallery part */
 .contBody ul {
   width: 90%;
   height: 90%;
@@ -183,11 +184,20 @@ header {
   display: flex;
   gap: 1vw;
 }
-.contBody ul li {
-  flex :1;
-  
+.contBody ul li:first-of-type {
+  width: 10px;
+  background-color: #999;
   outline: 1px solid black  ;
 } 
+.contBody ul li:nth-of-type(2) {
+  width: 30px;
+  outline: 1px solid black;
+  background-color: #666;
+}
+.contBody ul li:last-of-type {
+  width: calc((100% - 100px - 60px)*1);
+  background-color: #999;
+}
 
 .on {
   background-color: #111;
