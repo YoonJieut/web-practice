@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+body {
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  height: 100vh;
+}
+
+
+/* main ------------------ */
+#root {
+  width: 1000px;
+  height: 650px;
+  display: flex;
+  outline: 1px solid black;
+}
+
+
+/* header */
+header {
+  width: 200px;
+  height: 100%;
+  outline: 1px solid black;
+}
+
+#logo {
+  width: 100%;
+  height: 100px;
+  outline: 1px solid black;
+}
+#gnb {
+  width: 100%;
+  height: calc(100% - 100px);
+  outline: 1px solid black;
+  display: flex;
+  justify-content: center;
+}
+ul#mainMenu {
+  width: 90%;
+  outline: 1px solid black;
+}
+#mainMenu > li> span {
+  display: block;
+  width: 100%;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  outline: 1px solid black;
+}
+
+.subMenuUl {
+  overflow: hidden;
+  width: 100%;
+  /* 동적 스크립트롤 바꿀 height */
+  height: 0px;
+  transition: all 0.5s;
+}
+.subMenuUl li {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+/* hover 내용 */
+#mainMenu li :hover {
+  background-color: #888;
+  color: aliceblue;
+}
+.subMenuUl li :hover {
+  background-color: #888;
+  font-family: 700;
+}
+
+
+/* container part */
+#container{
+  width: 800px;
+  height: 100%;
+  outline: 1px solid black;
+}
+
+/* slide part */
+#slideBox {
+  width: 800px;
+  height: 350px;
+  position :relative;
+  outline: 1px solid black;
+
+  overflow : hidden
+}
+
+#slideUl {
+  position: absolute;
+  top:0;
+  left: 0;
+
+  display: flex;
+  width: 2400px;
+  height: 100%;
+}
+#slideUl > li {
+  width: 800px;
+  height :100%;
+}
+  #slide1 {
+    background-color: aqua;
+  }
+  #slide2 {
+    background-color: blue;
+  }
+  #slide3 {
+    background-color: blueviolet;
+  }
+
+
+/* content part */
+#content {
+  width: 100%;
+  height: 200px;
+  outline: 1px solid black;
+  display: flex;
+}
+
+#content > div {
+  flex : 1;
+  outline: 1px solid black;
+}
+
+.contHead {
+  width: 100px;
+  height: 40px;
+  background-color: #555;
+}
+.contBody {
+  width: 100%;
+  height: calc(100% - 40px);
+  outline: 1px solid black;
+  background-color: #999;
+  padding : 10px;
+}
+
+
+/* alert part */
+#alertUl {
+  flex-direction: column;
+  gap : 0.5vh;
+  width: 100%;
+  height: 100%;
+}
+#alertUl > li {
+  flex : 1;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+/* gall part */
+#gallery .contBody {
+  gap: 0.5vw;
+}
+#gallery .contBody > div {
+  width: 80px;
+  height: 80px;
+  outline: 1px solid black;
+}
+
+/* 바로가고 */
+#goto > div {
+  width: 100px;
+  height: 40px;
+}
+
+/* footer part */
+footer {
+  width: 100%;
+  height: 100px;
+  outline: 1px solid black;
+}
