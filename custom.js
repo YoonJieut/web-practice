@@ -69,15 +69,10 @@ first.addEventListener('click',()=>{
 
 const alertHead = document.getElementById('alertHead');
 const contBody = document.querySelectorAll('.contBody');
-console.log(contBody);
+// console.log(contBody);
 
 alertHead.addEventListener('click',(e)=>{
   console.dir(e.target);
-  // if(e.target.classList.contain('on')){
-    
-  // } else {
-  //   e.target.classList.toggle('on');
-  // }
   alertHead.children[0].classList.toggle('on');
   alertHead.children[1].classList.toggle('on');
   contBody[0].classList.toggle('display-flex');
