@@ -36,7 +36,7 @@ setInterval(()=>{
     console.log("setinterval")
     if(temp >= -1200){
       slideOut.style.left = temp + "px"; 
-      temp = temp-7;
+      temp = temp-10;
       console.log(temp);
     } else {
       clearInterval(A);
@@ -51,3 +51,13 @@ setInterval(()=>{
 }, 5000)
 
 
+// 모달 관련 로직
+const modalBtn = document.getElementById('modalButton');
+const modal = document.getElementById('modal')
+const first = document.getElementById('first');
+modalBtn.addEventListener('click',()=>{
+  modal.style.display = "none";
+});
+first.addEventListener('click',()=>{
+  modal.style.display = "flex";
+});

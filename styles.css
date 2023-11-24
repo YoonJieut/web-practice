@@ -103,7 +103,7 @@ header {
 #slideBox {
   width: 100%;
   height: 300px;
-  /* overflow: hidden; */
+  overflow: hidden;
   position: relative;
   
 }
@@ -131,13 +131,79 @@ header {
   background-color: blueviolet;
 }
 
-
+/*  --------------- */
 #alertCont {
   width: 100%;
   height: 200px;
+  display: flex;
+}
+#alertCont > div {
+  flex: 1;
+  outline: 1px solid black;
+  position: relative;
 }
 
-footer {
+.contHead {
+  height: 40px;
+  line-height: 40px;
+  width: 100px;
+  outline: 1px solid black;
+}
+.contBody {
+  height: calc(200px - 40px);
   width: 100%;
+  outline: 1px solid black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contBody ul {
+  width: 90%;
+  height: 90%;
+  outline: 1px solid black;
+  display: flex;
+  gap: 1vw;
+}
+.contBody ul li {
+  flex :1;
+  
+  outline: 1px solid black  ;
+} 
+
+.on {
+  background-color: #111;
+  font-weight: 700;
+  color: #fff;
+}
+
+#banner div {
+  width: 100px;
+  height: 40px;
+  background-color: #777;
+}
+
+
+/* footer ------------------ */
+footer {
+  width: 1200px;
   height : 100px;
+  background-color: #888;
+}
+
+/* 모달창 */
+#modal {
+  width: 100vw;
+  height :100vh;
+  background-color: rgba(33, 30, 30, 0.9);
+  position : absolute;
+  top:0;
+  left:0;
+  z-index: 10;
+}
+#modalCont {
+  width: 50vw;
+  height: 70vh;
+  flex-direction: column;
 }

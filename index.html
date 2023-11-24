@@ -8,6 +8,13 @@
   <title>Document</title>
 </head>
 <body>
+  <div id="modal" class="flex">
+    <div id="modalCont" class="flex">
+      <h1>타이틀</h1>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur et tenetur nostrum praesentium porro dolorem dicta assumenda mollitia sint similique, fugit veniam voluptates, at iure unde non. Quibusdam, incidunt distinctio?</p>
+      <button id="modalButton">닫기</button>
+    </div>
+  </div>
   <div id="root">
     <header>
       <div id="logo" class="flex">
@@ -60,12 +67,31 @@
       </div>
       <div id="alertCont">
         <div id="alert">
-
+          <div class="flex contHead">
+            공지사항
+          </div>
+          <div class="contBody">
+            <ul>
+              <li><span id="first">hi</span></li>
+            </ul>
+          </div>
         </div>
-        <div id="gallery"></div>
-        <div id="banner"></div>
+        <div id="gallery">
+          <div class="flex contHead">
+            갤러리
+          </div>
+          <div class="contBody">
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <div id="banner" class="flex">
+          <div class="flex">바로 가기</div>
+        </div>
       </div>
-
     </div>
     <footer></footer>
 
